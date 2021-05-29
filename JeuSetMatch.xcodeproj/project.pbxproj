@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		6877F67F266271B10023103B /* JeuSetMatch.xcodeproj in Resources */ = {isa = PBXBuildFile; fileRef = C902929D1F8D0500003E6B8B /* JeuSetMatch.xcodeproj */; };
 		C90292A11F8D0500003E6B8B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C90292A01F8D0500003E6B8B /* AppDelegate.swift */; };
 		C90292A31F8D0500003E6B8B /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C90292A21F8D0500003E6B8B /* ViewController.swift */; };
 		C90292A61F8D0500003E6B8B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C90292A41F8D0500003E6B8B /* Main.storyboard */; };
@@ -18,7 +19,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		C902929D1F8D0500003E6B8B /* JeuSetMatch.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = JeuSetMatch.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		6887DEC1266160A500D5BD0B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		6887DEC7266160FC00D5BD0B /* GameTestCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameTestCase.swift; sourceTree = "<group>"; };
+		C902929D1F8D0500003E6B8B /* JeuSetMatch.xcodeproj */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; name = JeuSetMatch.xcodeproj; path = ../../JeuSetMatch.xcodeproj; sourceTree = BUILT_PRODUCTS_DIR; };
 		C90292A01F8D0500003E6B8B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		C90292A21F8D0500003E6B8B /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		C90292A51F8D0500003E6B8B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -41,10 +44,20 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		6887DEBE266160A500D5BD0B /* JeuSetMatchTests */ = {
+			isa = PBXGroup;
+			children = (
+				6887DEC1266160A500D5BD0B /* Info.plist */,
+				6887DEC7266160FC00D5BD0B /* GameTestCase.swift */,
+			);
+			path = JeuSetMatchTests;
+			sourceTree = "<group>";
+		};
 		C90292941F8D0500003E6B8B = {
 			isa = PBXGroup;
 			children = (
 				C902929F1F8D0500003E6B8B /* JeuSetMatch */,
+				6887DEBE266160A500D5BD0B /* JeuSetMatchTests */,
 				C902929E1F8D0500003E6B8B /* Products */,
 			);
 			sourceTree = "<group>";
@@ -52,7 +65,7 @@
 		C902929E1F8D0500003E6B8B /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				C902929D1F8D0500003E6B8B /* JeuSetMatch.app */,
+				C902929D1F8D0500003E6B8B /* JeuSetMatch.xcodeproj */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -115,6 +128,7 @@
 				C90292991F8D0500003E6B8B /* Sources */,
 				C902929A1F8D0500003E6B8B /* Frameworks */,
 				C902929B1F8D0500003E6B8B /* Resources */,
+				6887DEB8266129CA00D5BD0B /* ShellScript */,
 			);
 			buildRules = (
 			);
@@ -122,7 +136,7 @@
 			);
 			name = JeuSetMatch;
 			productName = TennisScore;
-			productReference = C902929D1F8D0500003E6B8B /* JeuSetMatch.app */;
+			productReference = C902929D1F8D0500003E6B8B /* JeuSetMatch.xcodeproj */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -131,8 +145,8 @@
 		C90292951F8D0500003E6B8B /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastSwiftUpdateCheck = 0900;
-				LastUpgradeCheck = 0900;
+				LastSwiftUpdateCheck = 1250;
+				LastUpgradeCheck = 1250;
 				ORGANIZATIONNAME = OpenClassrooms;
 				TargetAttributes = {
 					C902929C1F8D0500003E6B8B = {
@@ -165,12 +179,33 @@
 			buildActionMask = 2147483647;
 			files = (
 				C90292AB1F8D0500003E6B8B /* LaunchScreen.storyboard in Resources */,
+				6877F67F266271B10023103B /* JeuSetMatch.xcodeproj in Resources */,
 				C985A5E51F8F7AD200DBC442 /* Assets.xcassets in Resources */,
 				C90292A61F8D0500003E6B8B /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		6887DEB8266129CA00D5BD0B /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "if which swiftlint >/dev/null; then\n    swiftlint\nelse\n    echo \"warning: SwiftLint not installed, download from https://github.com/realm/SwiftLint\"\nfi\n";
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		C90292991F8D0500003E6B8B /* Sources */ = {
@@ -221,6 +256,7 @@
 				CLANG_WARN_BOOL_CONVERSION = YES;
 				CLANG_WARN_COMMA = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
 				CLANG_WARN_EMPTY_BODY = YES;
@@ -228,8 +264,10 @@
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
 				CLANG_WARN_STRICT_PROTOTYPES = YES;
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
@@ -255,7 +293,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
@@ -278,6 +316,7 @@
 				CLANG_WARN_BOOL_CONVERSION = YES;
 				CLANG_WARN_COMMA = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
 				CLANG_WARN_EMPTY_BODY = YES;
@@ -285,8 +324,10 @@
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
 				CLANG_WARN_STRICT_PROTOTYPES = YES;
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
@@ -306,7 +347,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
 				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";

@@ -62,12 +62,12 @@ class ViewController: UIViewController {
     }
 
     private func updateAllSetsScore(forPlayer player: Player) {
-        for i in 0..<6 {
-            if i < match.sets.count {
-                let set = match.sets[i]
-                playerSetScoreLabels[player]![i].text = "\(set.scores[player]!)"
+        for int in 0..<5 {
+            if int < match.sets.count {
+                let set = match.sets[int]
+                playerSetScoreLabels[player]![int].text = "\(set.scores[player]!)"
             } else {
-                playerSetScoreLabels[player]![i].text = ""
+                playerSetScoreLabels[player]![int].text = ""
             }
         }
     }

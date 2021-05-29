@@ -2,6 +2,6 @@
 <Workspace
    version = "1.0">
    <FileRef
-      location = "self:/Users/ambroisecollon/Desktop/TennisScore/Jeu Set &amp; Match.xcodeproj">
+      location = "self:../../../../Library/Developer/Xcode/DerivedData/JeuSetMatch-bwvisaatjcvdcxcjhgirvdugrads/Build/Products/Debug-iphonesimulator/JeuSetMatch.app">
    </FileRef>
 </Workspace>
